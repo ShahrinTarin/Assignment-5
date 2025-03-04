@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- daisi Ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .font-poppins {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="font-poppins bg-[#3751fd1a] py-6">
+    <div class=" w-[85vw] mx-auto">
+        <!-- nav  -->
+    <div class="navbar px-8 py-4 space-x-2 bg-white rounded-xl mb-3">
+
+        <div><img class="h-10 w-10" src="./assets/logo.png" alt=""></div>
+        <div class="flex-1">
+            <a class="text-2xl">Dev<span class="font-extrabold">Board</span></a>
+        </div>
+
+        <div class="flex-none space-x-5">
+            <button id="back" class="btn btn-primary px-4 py-3 rounded-md cursor-pointer">
+                Back to Desk
+            </button>
+        </div>
+    </div>
+    <!-- nav ends  -->
+
+    <h1 class="text-center font-bold text-xl p-4">Blogs</h1>
+
+    <!-- question  -->
+     <div class="bg-white rounded-md">
+        <h1 class="font-bold p-5 border-dashed border-b-1 border-[#3751fd3a]">Question-1: What are the different ways to select an element in the DOM?</h1>
+        <p class="p-5 font-medium text-base">1.By using getElementsByTagName ,2.By using getElementsByClassName ,3.By using getElementById ,4.By using querySelector ,5.By using querySelectorAll</p>
+     </div>
+     <!-- question ends  -->
+    </div>
+    <script src="discover.js"></script>
+</body>
+
+</html>

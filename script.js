@@ -18,3 +18,16 @@ const setDate = currentDate.toLocaleDateString("en-US", allDayName);
 document.getElementById('day').textContent = setDay+' ,'
 document.getElementById('time').textContent = setDate.replace(",","")
 
+
+const btn=document.querySelectorAll(".btn");
+console.log(btn);
+
+document.getElementById('discover').addEventListener('click',function(){
+    window.location.href='./discover.html'
+})
+
+
+
+
+
+
