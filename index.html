@@ -1,1 +1,248 @@
-sc
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- daisi Ui cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .font-poppins {
+            font-family: "Poppins", sans-serif;
+        }
+    </style>
+
+</head>
+
+<body id="body" class="bg-[#3751fd1a] py-6 font-poppins">
+    <!-- container layout -->
+    <div class="w-[85vw] mx-auto grid ">
+        <!-- nav starts -->
+        <div class="navbar px-8 py-4 space-x-2 bg-white rounded-xl mb-3">
+
+            <div><img class="h-10 w-10" src="./assets/logo.png" alt=""></div>
+            <div class="flex-1">
+                <a class="text-2xl">Dev<span class="font-extrabold">Board</span></a>
+            </div>
+
+            <div class="flex-none space-x-5">
+                <button class="bg-[#3751fd1a] px-4 py-2 rounded-full">
+                    <div class="flex justify-center items-center gap-3">
+                        <img class="w-6 h-6" src="./assets/checkbox.png" alt="">
+                        <p class="font-bold text-2xl">23</p>
+                    </div>
+                </button>
+                <button class="bg-[#3751fd1a] p-2 rounded-full cursor-pointer">
+                    <img  id="theme" class="w-8 h-8" src="/assets/theme-btn.png" alt="">
+                </button>
+            </div>
+        </div>
+        <!-- nav ends -->
+        <!-- grid below nav starts -->
+        <div class="grid grid-cols-4 gap-3 rounded-xl">
+            <!-- left of main grid starts -->
+            <div class="col-span-3 rounded-xl bg-white">
+                <div class="grid grid-cols-4 gap-4 items-center p-5 border-dashed border-b-1 border-[#3751fd3a] ">
+                    <div class="bg-[#F4F7FF] rounded-md py-6 flex gap-3 justify-center items-center">
+                        <div class="w-12 h-12 rounded-full flex justify-center items-center bg-white"><img
+                                class="w-5 h-5" src="./assets/checkbox.png" alt=""></div>
+                        <div>
+                            <p class="font-medium text-sm text-[#00303C]">Task Assigned </p>
+                            <h1 class="text-[#00303C] font-bold text-3xl">5</h1>
+                        </div>
+                    </div>
+                    <div class="col-span-2">
+                        <div
+                            class="bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8] rounded-md py-5 flex gap-3 pl-10 items-center">
+                            <div><img class="w-16 h-16" src="./assets/board.png" alt=""></div>
+                            <div>
+                                <h1 class="text-white font-medium text-xl">Discover Something <br> New Today!</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bg-[#F4F7FF] rounded-md py-7 flex gap-3 justify-center items-center">
+                            <div class="w-12 h-12 rounded-full flex justify-center items-center bg-white"><img
+                                    class="w-5 h-5" src="./assets/calender.png" alt=""></div>
+                              <div>
+                                <div id="day">
+
+                                </div>     
+                              <div class="font-bold" id="time">
+  
+                              </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- cards container  -->
+                <div class="p-5 grid grid-cols-3 gap-5">
+                    <!-- card1  -->
+                    <div class="card bg-[#F4F7FF] w-96 bg-base-100 card-lg shadow-sm">
+                        <div class="card-body">
+                            <div><button class="bg-white mb-1 px-3 text-sm py-1 rounded-md">ShopEase</button></div>
+                            <h2 class="card-title font-medium text-[#00303C] mb-4 text-xl">Fix Mobile Button Issue </h2>
+                            <p
+                                class="overflow-hidden whitespace-nowrap truncate text-sm text-[#000000] bg-white mb-3 p-4 rounded-lg">
+                                Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick
+                                works properly
+                                and ensure onClick works properly</p>
+                            <div class="card-actions justify-between">
+                                <div>
+                                    <h1 class="text-xs text-gray-500">Deadline</h1>
+                                    <p class="font-medium text-sm">21 March 2025</p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary text-xs rounded-lg px-5 py-0">Completed</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- card1 ends -->
+                    <!-- card2  -->
+                    <div class="card bg-[#F4F7FF] w-96 bg-base-100 card-lg shadow-sm">
+                        <div class="card-body">
+                            <div><button class="bg-white mb-1 px-3 text-sm py-1 rounded-md">Cloud Sync</button></div>
+                            <h2 class="card-title font-medium text-[#00303C] mb-4 text-xl">Add Dark Mode </h2>
+                            <p
+                                class="overflow-hidden whitespace-nowrap truncate text-sm text-[#000000] bg-white mb-3 p-4 rounded-lg">
+                                Store the user's preference in <br> localStorage, update CSS variables dynamically, and
+                                apply a smooth transition effect.</p>
+                            <div class="card-actions justify-between">
+                                <div>
+                                    <h1 class="text-xs text-gray-500">Deadline</h1>
+                                    <p class="font-medium text-sm">21 March 2025</p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary text-xs rounded-lg px-5 py-0">Completed</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- card2 ends -->
+                    <!-- card3  -->
+                    <div class="card bg-[#F4F7FF] w-96 bg-base-100 card-lg shadow-sm">
+                        <div class="card-body">
+                            <div><button class="bg-white mb-1 px-3 text-sm py-1 rounded-md">SwiftPay</button></div>
+                            <h2 class="card-title font-medium text-[#00303C] mb-4 text-xl">Optimize Home page </h2>
+                            <p
+                                class="overflow-hidden whitespace-nowrap truncate text-sm text-[#000000] bg-white mb-3 p-4 rounded-lg">
+                                Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick
+                                works properly
+                                and ensure onClick works properly</p>
+                            <div class="card-actions justify-between">
+                                <div>
+                                    <h1 class="text-xs text-gray-500">Deadline</h1>
+                                    <p class="font-medium text-sm">21 March 2025</p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary text-xs rounded-lg px-5 py-0">Completed</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- card3 ends -->
+                    <!-- card4  -->
+                    <div class="card bg-[#F4F7FF] w-96 bg-base-100 card-lg shadow-sm">
+                        <div class="card-body">
+                            <div><button class="bg-white mb-1 px-3 text-sm py-1 rounded-md">Meta</button></div>
+                            <h2 class="card-title font-medium text-[#00303C] mb-4 text-xl">Add new emoji 🤲</h2>
+                            <p
+                                class="overflow-hidden whitespace-nowrap truncate text-sm text-[#000000] bg-white mb-3 p-4 rounded-lg">
+                                Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick
+                                works properly
+                                and ensure onClick works properly</p>
+                            <div class="card-actions justify-between">
+                                <div>
+                                    <h1 class="text-xs text-gray-500">Deadline</h1>
+                                    <p class="font-medium text-sm">21 March 2025</p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary text-xs rounded-lg px-5 py-0">Completed</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- card4 ends -->
+                    <!-- card5  -->
+                    <div class="card bg-[#F4F7FF] w-96 bg-base-100 card-lg shadow-sm">
+                        <div class="card-body">
+                            <div><button class="bg-white mb-1 px-3 text-sm py-1 rounded-md">Google LLC</button></div>
+                            <h2 class="card-title font-medium text-[#00303C] mb-4 text-xl">Integrate OpenAI API </h2>
+                            <p
+                                class="overflow-hidden whitespace-nowrap truncate text-sm text-[#000000] bg-white mb-3 p-4 rounded-lg">
+                                Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick
+                                works properly
+                                and ensure onClick works properly</p>
+                            <div class="card-actions justify-between">
+                                <div>
+                                    <h1 class="text-xs text-gray-500">Deadline</h1>
+                                    <p class="font-medium text-sm">21 March 2025</p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary text-xs rounded-lg px-5 py-0">Completed</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- card5 ends -->
+                    <!-- card6  -->
+                    <div class="card bg-[#F4F7FF] w-96 bg-base-100 card-lg shadow-sm">
+                        <div class="card-body">
+                            <div><button class="bg-white mb-1 px-3 text-sm py-1 rounded-md">Glassdoar</button></div>
+                            <h2 class="card-title font-medium text-[#00303C] mb-4 text-xl">Improve Job searching </h2>
+                            <p
+                                class="overflow-hidden whitespace-nowrap truncate text-sm text-[#000000] bg-white mb-3 p-4 rounded-lg">
+                                Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick
+                                works properly
+                                and ensure onClick works properly</p>
+                            <div class="card-actions justify-between">
+                                <div>
+                                    <h1 class="text-xs text-gray-500">Deadline</h1>
+                                    <p class="font-medium text-sm">21 March 2025</p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary text-xs rounded-lg px-5 py-0">Completed</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- card6 ends -->
+                </div>
+                <!-- cards container ends -->
+            </div>
+            <!-- left of main grid ends -->
+            <!-- clear history  -->
+            <div class="rounded-xl bg-white text-center">
+                <div class="border-dashed border-b-1 border-[#3751fd3a] pb-4 space-y-4">
+                    <div class="flex gap-3 justify-center pt-5">
+                        <img class="h-5 w-5" src="./assets/activity.png" alt="">
+                        <p class="font-medium text-base">Activity Log</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary rounded-lg text-xs px-5 py-0">Clear History</button>
+                    </div>
+                </div>
+            </div>
+            <!-- clear history ends -->
+        </div>
+        <!-- grid below nav end -->
+    </div>
+    <!-- container layout end -->
+     <script src="script.js"></script>
+</body>
+
+</html>
