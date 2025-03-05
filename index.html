@@ -36,7 +36,7 @@
                 <button class="bg-[#3751fd1a] px-4 py-2 rounded-full">
                     <div class="flex justify-center items-center gap-3">
                         <img class="w-6 h-6" src="./assets/checkbox.png" alt="">
-                        <p class="font-bold text-2xl">23</p>
+                        <p id="checkCount" class="font-bold text-2xl">23</p>
                     </div>
                 </button>
                 <button class="bg-[#3751fd1a] p-2 rounded-full cursor-pointer">
@@ -55,7 +55,7 @@
                                 class="w-5 h-5" src="./assets/checkbox.png" alt=""></div>
                         <div>
                             <p class="font-medium text-sm text-[#00303C]">Task Assigned </p>
-                            <h1 class="text-[#00303C] font-bold text-3xl">6</h1>
+                            <h1 id="count" class="text-[#00303C] font-bold text-3xl">6</h1>
                         </div>
                     </div>
                     <div class="col-span-2 cursor-pointer"  id="discover">
@@ -85,7 +85,7 @@
                 <!-- cards container  -->
                 <div class="p-5 grid grid-cols-3 gap-5">
                     <!-- card1  -->
-                    <div class="card bg-[#F4F7FF] w-96 bg-base-100 card-lg shadow-sm">
+                    <div  class="card bg-[#F4F7FF] w-96 bg-base-100 card-lg shadow-sm">
                         <div class="card-body">
                             <div><button class="bg-white mb-1 px-3 text-sm py-1 rounded-md">ShopEase</button></div>
                             <h2 class="card-title font-medium text-[#00303C] mb-4 text-xl">Fix Mobile Button Issue </h2>
@@ -100,7 +100,7 @@
                                     <p class="font-medium text-sm">21 March 2025</p>
                                 </div>
                                 <div>
-                                    <button
+                                    <button onclick="historyContent('Fix Mobile Button Issue')"
                                         class="btn btn-completed btn-primary text-xs rounded-lg px-5 py-0">Completed</button>
                                 </div>
                             </div>
@@ -123,7 +123,7 @@
                                     <p class="font-medium text-sm">21 March 2025</p>
                                 </div>
                                 <div>
-                                    <button class="btn btn-completed btn-primary text-xs rounded-lg px-5 py-0">Completed</button>
+                                    <button onclick="historyContent('Add Dark Mode')" class=" btn btn-completed btn-primary text-xs rounded-lg px-5 py-0">Completed</button>
                                 </div>
                             </div>
 
@@ -146,7 +146,7 @@
                                     <p class="font-medium text-sm">21 March 2025</p>
                                 </div>
                                 <div>
-                                    <button
+                                    <button  onclick="historyContent('Optimize  Home page ')"
                                         class="btn btn-completed btn-primary text-xs rounded-lg px-5 py-0">Completed</button>
                                 </div>
                             </div>
@@ -170,7 +170,7 @@
                                     <p class="font-medium text-sm">21 March 2025</p>
                                 </div>
                                 <div>
-                                    <button
+                                    <button  onclick="historyContent('Add new emoji 🤲')"
                                         class="btn btn-completed btn-primary text-xs rounded-lg px-5 py-0">Completed</button>
                                 </div>
                             </div>
@@ -194,7 +194,7 @@
                                     <p class="font-medium text-sm">21 March 2025</p>
                                 </div>
                                 <div>
-                                    <button
+                                    <button  onclick="historyContent('Integrate OpenAI API ')"
                                         class="btn btn-completed btn-primary text-xs rounded-lg px-5 py-0">Completed</button>
                                 </div>
                             </div>
@@ -218,7 +218,7 @@
                                     <p class="font-medium text-sm">21 March 2025</p>
                                 </div>
                                 <div>
-                                    <button
+                                    <button  onclick="historyContent('Improve Job searching ')"
                                         class="btn btn-completed btn-primary text-xs rounded-lg px-5 py-0">Completed</button>
                                 </div>
                             </div>
@@ -238,10 +238,10 @@
                         <p class="font-medium text-base">Activity Log</p>
                     </div>
                     <div>
-                        <button class="btn btn-primary rounded-lg text-xs px-5 py-0">Clear History</button>
+                        <button class="btn btn-primary rounded-lg text-xs px-5 py-0" id="clear-btn">Clear History</button>
                     </div>
                 </div>
-                <div class=""></div>
+                <div class="flex p-5 flex-col gap-3" id="history"></div>
             </div>
             <!-- clear history ends -->
         </div>
